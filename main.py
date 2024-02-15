@@ -9,19 +9,16 @@ class Queue():
 
     #REMOVE PASS AND COMPLETE THE FUNCTION
     def pop(self):
-        if len(self.cards) == 0:
-            return None
-        else:
-              return self.cards.pop(0)
+        del self.cards[0]
+    
+        
         
 
 if __name__ == '__main__':
     #REMOVE PASS AND YOUR CODE GOES HERE
-        queue = Queue() 
-queue.push("Card1")  
-queue.push("Card2")
-queue.push("Card3")
-print("Popped:", queue.pop())  
-print("Popped:", queue.pop())
-print("Popped:", queue.pop())
-print("Popped:", queue.pop())
+    deck = Queue()
+    deck.push(3)
+    deck.push(4)
+    deck.push(5)
+    deck.pop()
+    print(deck.cards)
